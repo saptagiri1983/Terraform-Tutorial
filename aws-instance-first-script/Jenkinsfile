@@ -1,6 +1,6 @@
 
 pipeline {
-
+    agent  any
     parameters {
         string(name: 'environment', defaultValue: 'terraform', description: 'Workspace/environment file to use for deployment')
         booleanParam(name: 'autoApprove', defaultValue: false, description: 'Automatically run apply after generating plan?')
@@ -12,7 +12,7 @@ pipeline {
         AWS_ACCESS_KEY_ID     = 'AKIASQKOB2PQWHJPGTNH'
         AWS_SECRET_ACCESS_KEY = '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'
 
-   agent  any
+   
         options {
                 timestamps ()
                 ansiColor('xterm')
